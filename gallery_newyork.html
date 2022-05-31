@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gallery New York</title>
+    <link rel="icon" href="file:///D:/xd/img/icon.png" type="image/icon type">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Asadbek Kenjabaev">
+    <meta name="keywords" content="Travelling, sightseeing places,Highlights from cities,top attractions,alluwant,Asadbek Kenjabaev">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/35fd1cf92c.js" crossorigin="anonymous"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T45EM414Q0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-T45EM414Q0');
+    </script>
+
+  </head>
+  <body id="body_blog">
+    <header class="header">
+        <div class="container">
+          <div class="header_inner">
+            <div class="header_logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
+              
+                 <nav class="nav nav_link_blog nav_link_blog_newyork" id="nav">
+                   <a class="nav_link " href="index.html">Home</a>
+                   <a class="nav_link" href="about.html">About</a>
+                   <a class="nav_link active" href="blog.html">Blog</a>
+                   <a class="nav_link" href="https://www.123formbuilder.com/form-5726533/form" target="_blank">Contact</a>
+                 </nav>
+                 
+                 <button class="nav_toggle" id="nav_toggle" type="button">
+                   <span class="nav_toggle-item"></span>
+                 </button>
+          </div>
+        </div>
+    </header>
+    <div class="intro gallery_intro_newyork">
+        <div class="container">
+              <div class=".intro_inner">
+                <h3 class="intro_subtitle intro_subtitle_gallery">Gallery New York</h3>
+                <h1 class="intro_title">Enjoy!</h1>
+              </div> <!-- ./intro_inner-->
+        </div>
+    </div> <!--/.intro-->
+    <script>
+      function changeBackground(){
+        var body_blog = document.getElementById("body_blog");
+        body_blog.classList.toggle("changeBackground");
+      }
+    </script>
+
+    <div id="result"></div>
+
+    <script type="text/javascript">
+       var galleryItems = '[{"URL":"img/blog/galleryItems/gallery_newyork/1.jpg","Caption":"Timelapse Photography of Vehicles on Road"}, {"URL":"img/blog/galleryItems/gallery_newyork/2.jpg","Caption":"People Standing on Brown Bridge"}, {"URL":"img/blog/galleryItems/gallery_newyork/3.jpg","Caption":"Aerial Photo of Buildings"}, {"URL":"img/blog/galleryItems/gallery_newyork/4.jpg","Caption":"View of Historical Building"}, {"URL":"img/blog/galleryItems/gallery_newyork/5.jpg","Caption":"One World Trade Center in Manhattan"}, {"URL":"img/blog/galleryItems/gallery_newyork/6.jpg","Caption":"Bow Bridge crossing calm lake in autumn park"}, {"URL":"img/blog/galleryItems/gallery_newyork/7.jpg","Caption":"People At Times Square, New York"}, {"URL":"img/blog/galleryItems/gallery_newyork/8.jpg","Caption":"A Woman in Blue Dress and Her Brown Pug"}, {"URL":"img/blog/galleryItems/gallery_newyork/9.jpg","Caption":"Man Sitting By The Window Of A Yellow Car"}]';
+       var Items = JSON.parse(galleryItems);
+       console.log(Items);
+       for(var i in Items){
+         var elemGallery = document.createElement("div");
+         elemGallery.classList.add("gallery");
+         var elemA = document.createElement("a");
+         elemA.target = "_blank";
+         elemA.href = Items[i].URL;
+         var elemImg = document.createElement("img");
+         elemImg.src = Items[i].URL;
+         elemImg.alt = Items[i].Caption;
+         elemA.appendChild(elemImg);
+         var elemDescription = document.createElement("div");
+         elemDescription.classList.add("desc");
+         elemDescription.innerHTML = "Image " + (+i + 1) + "<br><b>" +Items[i].Caption + "</b>";
+         elemGallery.appendChild(elemA);
+         elemGallery.appendChild(elemDescription);
+
+         var result = document.getElementById("result");
+         result.appendChild(elemGallery);
+       }
+
+       /*Slideshow*/
+    </script>
+    <div class="slideshow-container newyork">
+      <div class="mySlides fade">
+       <img src="img/blog/galleryItems/gallery_newyork/slideshow/1.jpg" style="width:100%">
+       <div class="text">AlluWant</div>
+      </div>
+      <div class="mySlides fade">
+       <img src="img/blog/galleryItems/gallery_newyork/slideshow/2.jpg" style="width:100%">
+       <div class="text">AlluWant</div>
+      </div>
+      <div class="mySlides fade">
+       <img src="img/blog/galleryItems/gallery_newyork/slideshow/3.jpg" style="width:100%">
+       <div class="text">AlluWant</div>
+      </div>
+      <div class="mySlides fade">
+       <img src="img/blog/galleryItems/gallery_newyork/slideshow/4.jpg" style="width:100%">
+       <div class="text">AlluWant</div>
+      </div>
+      <div class="mySlides fade">
+       <img src="img/blog/galleryItems/gallery_newyork/slideshow/5.jpg" style="width:100%">
+       <div class="text">AlluWant</div>
+      </div>
+    </div>
+      <br>
+
+      <div class="dot_slideshow" style="text-align:center">
+       <span class="dot"></span>
+       <span class="dot"></span>
+       <span class="dot"></span>
+       <span class="dot"></span>
+       <span class="dot"></span>
+      </div>
+      <script type="text/javascript" src="js/script.js"></script>
+
+    <button class="background_changer" onclick="changeBackground()">Click to Change Background</button>
+    <span><a href="blog.html"><button class="back_button" type="button" name="button"><i class="fas fa-arrow-circle-left"></i>  Back</button></a></span>
+     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>  
+       
+  </body>
+</html>
